@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { EngineerService } from './engineer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipeModule } from 'ngx-filter-pipe';
- import {FormsModule,ReactiveFormsModule} from '@angular/forms'
+ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { SearchPipe } from './search.pipe'
 // import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

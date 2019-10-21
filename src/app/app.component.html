@@ -1,8 +1,9 @@
 
 <div>
- <input type="text" [(ngModel)]="userFilter.title" placeholder="name">
+    <label>Search</label>
+ <input type="text" [(ngModel)]="keyy" placeholder="name">
 </div>
- <table class="table table-bordered" *ngIf="details">
+ <table class="table table-bordered" >
 <thead>
       <th>Title</th>
       <th>URL</th>
@@ -11,7 +12,7 @@
   </thead>
   <tbody>
 
-      <tr *ngFor="let e of details | filterBy: userFilter;" (click)="submit(e)" data-toggle="modal" data-target="#myModal" (click)="highlightRow(e)"  [ngClass] = "{'highlight' : e.title == selectedName}">
+      <tr *ngFor="let e of details | search:keyy" (click)="submit(e)" data-toggle="modal" data-target="#myModal" (click)="highlightRow(e)"  [ngClass] = "{'highlight' : e.title == selectedName}">
           
             
             
